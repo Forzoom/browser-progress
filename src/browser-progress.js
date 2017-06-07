@@ -1,15 +1,17 @@
 import {
 	install,
+	_Vue,
 } from './install.js';
 
-export class BrowserProgress {
+export default class BrowserProgress {
 
 	constructor() {
 		this.app = null;
-		this.progress = 0; // 默认为0
+		this._progress = 0; // 默认为0
+		_Vue.util.defineReactive(this, 'progress', this._progress);
 	}
 	/**
-	 * 初始化所需要调用的函数
+	 * 初始化所需要调用的函数，貌似并非必须
 	 */
 	init(app) {
 		if (this.app) {
