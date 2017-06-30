@@ -1,4 +1,4 @@
-import BrowserProgress from './components/browser-progress.vue';
+import BrowserProgress from './components/browser-progress.js';
 
 export let _Vue;
 
